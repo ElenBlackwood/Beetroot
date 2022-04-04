@@ -1,0 +1,119 @@
+.subscribe {
+    padding: 125px 0 21px;
+    text-align: center;
+
+    @include breakpoint (xxs) {
+        margin-bottom: -20px;
+        padding: 50px 0 21px;
+
+    }
+
+    .subscribe-title {
+        font-size: 60px;
+        line-height: 70px;
+        color: $orange;
+        margin-bottom: 20px;
+        
+        @include breakpoint (md) {
+            font-size: 40px;
+            line-height: 50px;
+        }
+    }
+
+    .pseudo-title {
+        font-size: 12px;
+        line-height: 28px;
+    }
+
+    .form {
+        margin-bottom: 32px;
+        padding-top: 82px;
+    }
+
+    .input {
+        border: 1px solid #4B4136;
+        width: 416px;
+        height: 59px;
+        background-color: $black;
+
+        @include breakpoint (xxs) {
+            width: 210px;
+        }
+    }
+
+    .btn {
+        width: 420px;
+        height: 59px;
+        background-color: $orange;
+        border-radius: 0px;
+        font-size: 12px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        @include breakpoint (xxs) {
+            width: 210px;
+        }
+    }
+
+    .form-text {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        max-width: 411px;
+        margin: 0 auto;
+        margin-bottom: 34px;
+    }
+
+    .text-link {
+        color: $orange;
+    }
+
+    .icon-holder {
+        margin-bottom: 41px;
+    }
+
+    .icon-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .icon-item {
+        list-style: none;
+        margin-right: 8px;
+        border: 1px solid #4B4136;
+        padding: 15px;
+
+        &:last-child {
+            margin-right: -8px;
+        }
+
+        .icon-facebook {
+            color: $white;
+            max-width: 20px;
+        }
+
+        .icon-twitter {
+            color: $white;
+            max-width: 20px;
+        }
+
+        .icon-instagram {
+            color: $white;
+            max-width: 20px;
+        }
+
+        .icon-linkedin-in {
+            color: $white;
+        }
+
+        
+    }
+
+   
+
+}
+
+   

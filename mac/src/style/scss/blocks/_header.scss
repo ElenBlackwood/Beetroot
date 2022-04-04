@@ -1,0 +1,105 @@
+.header {
+    padding: 28px 0;
+
+    
+
+    .logo-holder {
+        width: 75px;
+        
+        @include breakpoint('xxs') {
+            width: 50px;
+        }
+    }      
+    
+    .nav-holder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(100% - 75px);
+        padding-left: 42px;
+        
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+   
+    .nav-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+
+        @include breakpoint('xxs') {
+            position: fixed;
+            left: -100%;
+            top: 5rem;
+            flex-direction: column;
+            background-color: #fff;
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+
+            .nav-list.active {
+                left: 0;
+            }
+        }
+        
+    }
+
+    .nav-item {
+        margin-right: 40px;
+        font-size: 11px;
+        line-height: 24px;
+        text-transform: uppercase;
+
+        @include breakpoint('xxs') {
+            .nav-item {
+                margin: 80px 0;
+            }
+        }      
+        
+
+    }
+
+    @include breakpoint (xxs) {
+        .hamburger {
+            display: block;
+            cursor: pointer;       
+        }
+    }
+
+    .nav-link {
+        &:hover {
+            color: $orange;
+        }
+    }
+
+  
+    .btn {
+        padding: 15px 25px;
+        border: 1px solid #FFAE2B;
+        text-align: center;
+        font-size: 11px;
+        line-height: 22px;
+        text-transform: uppercase;
+        background-color: $black;
+        color: $orange;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:active {
+            color: $grey;
+            border: 1px solid $grey;
+        }
+    }
+    
+}

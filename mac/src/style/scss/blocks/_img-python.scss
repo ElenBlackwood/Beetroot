@@ -1,0 +1,15 @@
+.img-python {
+    min-height: 500px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    @include breakpoint (md) {
+        width: 768px;
+    }
+
+    @include breakpoint (xxs) {
+        width: 300px;
+    }
+}

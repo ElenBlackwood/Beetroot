@@ -1,0 +1,51 @@
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $black;
+    color: $grey;
+    font-family: 'Old Standard TT', serif;
+}
+
+img {
+    display: block;
+    width: 100%
+}
+
+a {
+    text-decoration: none;
+    color: $grey;
+}
+
+.container {
+    max-width: 1230px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint (md) {
+        padding: 0 25px;
+    }
+
+    
+    &.flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    
+}
+
+.border-line {
+    display: block;
+    border-bottom: 1px solid #4B4136;
+    margin-bottom: 21px;
+}
+
