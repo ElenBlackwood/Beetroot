@@ -22,7 +22,7 @@
             margin-bottom: 10px;
         }
 
-        @include breakpoint (xxs) {
+        @include breakpoint (xs) {
             justify-content: center;
         }
         
@@ -31,7 +31,7 @@
     .page {
         position: relative;
 
-        @include breakpoint (xxs) {
+        @include breakpoint (xs) {
             margin-bottom: 40px;
         }
 
@@ -59,7 +59,7 @@
             margin-bottom: 50px;
         }
 
-        @include breakpoint (xxs) {
+        @include breakpoint (xs) {
             background-size: 100% 100%;
         }
     }
@@ -67,7 +67,7 @@
     .follow-block {
         padding-top: 60px;
 
-        @include breakpoint (xxs) {
+        @include breakpoint (xs) {
             padding-top: 30px;
         }
     }
@@ -78,7 +78,7 @@
         color: $orange;
         margin-bottom: 40px;
 
-        @include breakpoint (xxs) {
+        @include breakpoint (xs) {
             font-size: 30px;
             line-height: 40px;
             text-align: center;
@@ -93,7 +93,7 @@
         max-width: 122px;
         margin: 0 auto;
 
-        @include breakpoint (xxs) {
+        @include breakpoint (xs) {
             padding: 7px 12px;
             max-width: 100px;
         }

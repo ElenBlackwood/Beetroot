@@ -14,7 +14,7 @@
         color: $grey;
         margin-bottom: 10px;
 
-        @include breakpoint (xxs) {
+        @include breakpoint (xs) {
             font-size: 10px;
             line-height: 20px;
         }
@@ -61,7 +61,7 @@
             }
         }
 
-        @include breakpoint (md) {
+        @include breakpoint (xs) {
             width: 100%;
             padding-right: 0px;
 

@@ -1,0 +1,240 @@
+.header {
+    padding: 28px 0;
+    position: relative;
+
+    &.active {
+        .nav {
+            transform: translateX(0);        
+        }
+
+        .nav-opener {
+            span {
+                transform: translate(0%, -50%) rotate(-47deg);
+            }
+
+            &::after {
+                top: 51%;
+                left: 49%;
+                transform: translate(-50%, -50%) rotate(-47deg)
+
+            }
+
+            &::before {
+                top: 51%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+    }
+
+    @include breakpoint ("md") {
+        padding: 28px 28px;
+    }
+
+    
+
+    .logo-holder {
+        width: 75px;
+        
+        @include breakpoint('xs') {
+            width: 50px;
+        }
+    }      
+    
+    .nav-holder {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: calc(100% - 75px);
+        padding-left: 42px;
+        justify-content: space-between;
+
+        @include breakpoint ("md") {
+            flex-direction: column;
+            padding: 0;
+        }
+        
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include breakpoint ("md") {
+            flex-direction: column;
+            position: absolute ;
+            top: 0;
+            right: 0;
+            width: 100%;
+            padding: 15px 0;
+            z-index: 2;
+            background-color: $black;
+            transform: translateX(100%);
+            transition: all ease-in-out 0.3s;
+        }
+
+        
+    }
+
+    
+
+   
+    .nav-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+
+        @include breakpoint ("md") {
+            flex-direction: column; 
+            margin: 0 0 20px;   
+            width: 100%;  
+        }
+        
+    }
+
+    .nav-item {
+        margin-right: 40px;
+        font-size: 11px;
+        line-height: 24px;
+        text-transform: uppercase;
+
+        @include breakpoint ("md") {
+            font-size: 15px;
+            line-height: 27px; 
+        }
+    
+    }
+
+    
+
+    .nav-link {
+        &:hover {
+            color: $orange;
+        }
+
+        @include breakpoint ("md") {
+            text-align: center;
+            display: block;
+        }
+    }
+
+    .btn {
+    padding: 15px 25px;
+    border: 1px solid #FFAE2B;
+    text-align: center;
+    font-size: 11px;
+    line-height: 22px;
+    text-transform: uppercase;
+    background-color: $black;
+    color: $orange;
+
+    @include breakpoint ("xs") {
+        font-size: 10px;
+        line-height: 18px;
+        padding: 10px 20px;
+        margin-right: 55px;
+    }
+
+    @include breakpoint ("xxs") {
+        font-size: 7px;
+        line-height: 14px;
+        padding: 7px 10px;
+    }
+
+        /*@include breakpoint ("md") {
+            
+            margin: 0;
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            z-index: 3;
+            
+        }*/
+
+        
+        
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:active {
+            color: $grey;
+            border: 1px solid $grey;
+        }
+    }
+
+    .nav-opener {
+        display: none;
+
+        @include breakpoint ("md") {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        @include breakpoint ("md") {
+            width: 40px;
+            height: 40px;                  
+        }
+
+        &::before {
+            content: "";
+            width: 40px;
+            height: 2px;
+            border-radius: 4px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $white;
+            transition: all ease-in-out 0.3s;
+        }
+
+        &::after {
+            content: "";
+            width: 40px;
+            height: 2px;
+            border-radius: 4px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $white;
+            transition: all ease-in-out 0.3s;
+        }
+
+        span {
+            width: 40px;
+            height: 2px;
+            border-radius: 4px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-50% -50%);
+            background-color: $white;
+            transition: all ease-in-out 0.3s;
+        }
+
+    }
+}
+    

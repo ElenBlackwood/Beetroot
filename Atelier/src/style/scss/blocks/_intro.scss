@@ -31,6 +31,11 @@
         text-transform: uppercase;
         color: $orange;
         margin-bottom: 15px;
+
+        @include breakpoint ("xs") {
+            font-size: 10px;
+            line-height: 18px;
+        }
     }
 
     .intro-title {
@@ -42,12 +47,13 @@
         margin-bottom: 35px;
 
         @include breakpoint (md) {
-            font-size: 50px;
+           font-size: 40px;
+           line-height: 50px;
         }
 
-        @include breakpoint (md) {
-            font-size: 40px;
-            line-height: 50px;
+        @include breakpoint (xs) {
+            font-size: 35px;
+           line-height: 45px;
         }
     }
 
@@ -58,6 +64,10 @@
         display: inline-block;
         font-size: 11px;
         line-height: 22px;
+
+        @include breakpoint (xs) {
+            padding: 12px 22px;
+        }
     }
 
 }

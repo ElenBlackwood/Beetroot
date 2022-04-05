@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    $('.hamburger').on('click', function() {
+    $('.nav-opener').on('click', function() {
         if ($('.header').hasClass('active')) {
             $('.header').removeClass('active');
         } else {

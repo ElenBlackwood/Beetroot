@@ -1,5 +1,9 @@
 .services {
     padding: 120px 0 120px;
+
+    @include breakpoint (xs) {
+        padding: 60px 0 600px;
+    }
     
 
 
@@ -26,7 +30,7 @@
             line-height: 60px;
         }
 
-        @include breakpoint (xxs) {
+        @include breakpoint (xs) {
             font-size: 40px;
             line-height: 50px;
         }
@@ -42,8 +46,9 @@
             margin: 0 auto;
         }
 
-        @include breakpoint (xxs) {
+        @include breakpoint (xs) {
             width: 100%;
+            flex-direction: column;
         }
         
 
@@ -65,7 +70,7 @@
         color: $orange;
         margin-bottom: 10px;
 
-        @include breakpoint (xxs) {
+        @include breakpoint (xss) {
             font-size: 20px;
             line-height: 30px;
         }
