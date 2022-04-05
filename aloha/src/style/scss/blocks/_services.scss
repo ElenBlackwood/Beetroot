@@ -1,0 +1,65 @@
+.services {
+    
+
+    .services-holder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 90px;
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+
+            &.text-holder {
+                padding-right: 100px;
+                
+            }
+
+        }
+    }
+
+    .services-img {
+
+        @include breakpoint ("md") {
+            margin-bottom: 90px;
+            
+        }
+    }
+
+
+
+    .card-img {
+        border-radius: 16px;
+    }
+
+    .text-holder {
+        padding-left: 100px;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+
+        @include breakpoint ("md") {
+            width: 100%;
+            padding-left: 0;
+            text-align: center;
+            justify-content: center;
+        }
+    }
+
+
+    }
+
+    .services-title {
+        font-size: 38px;
+        line-height: 44px;
+
+        @include breakpoint ("md") {
+            margin-bottom: 90px;
+            font-size: 30px;
+            line-height: 40px;            
+        }
+    }
+
+
+    

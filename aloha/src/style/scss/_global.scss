@@ -1,0 +1,67 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $milk;
+    color: $brown;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+
+}
+
+img {
+    display: block;
+    width: 100%
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $brown;
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    width: 100%;
+
+    &.flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.btn-holder {
+
+    @include breakpoint ("md") {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;        
+    }
+}
+
+.btn {
+    border: 2px solid $brown;
+    border-radius: 3px;
+    padding: 11px 17px;
+    font-size: 20px;
+    line-height: 29px;
+    display: inline-block;
+
+}

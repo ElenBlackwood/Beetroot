@@ -1,0 +1,168 @@
+.header {
+    padding-top: 40px;
+    position: relative;
+
+    &.active {
+        .nav {
+            transform: translateX(0);        
+        }
+
+        .nav-opener {
+            span {
+                transform: translate(0%, -50%) rotate(-47deg);
+            }
+
+            &::after {
+                top: 51%;
+                left: 49%;
+                transform: translate(-50%, -50%) rotate(-47deg)
+
+            }
+
+            &::before {
+                top: 51%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+    }
+
+    @include breakpoint ("md") {
+        padding: 40px 40px;
+    }
+
+    .nav {
+        
+        @include breakpoint ("md") {
+            flex-direction: column;
+            position: absolute ;
+            top: 0;
+            right: 0;
+            width: 100%;
+            padding: 15px 0;
+            z-index: 2;
+            background-color: $white;
+            transform: translateX(100%);
+            transition: all ease-in-out 0.3s;
+            
+
+        }
+    }
+
+    .nav-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 18px;
+        line-height: 29px;
+        margin-right: -36px;
+
+        @include breakpoint ("md") {
+            flex-direction: column; 
+            margin: 0 0 20px;   
+            width: 100%;  
+        }
+
+       
+        
+    }
+
+    .nav-item {
+        margin-right: 36px;
+
+        @include breakpoint ("md") {
+            padding: 10px;
+            font-size: 40px;             
+            margin-right: 0;
+            width: 100%;
+        }
+
+        @include breakpoint ("xs") {
+            padding: 20px;
+            font-size: 20px;              
+        }
+
+        
+
+      
+
+      /*  &:last-child {
+            margin-right: -36px;
+
+            
+        }*/
+    }
+
+    .nav-link {
+
+        @include breakpoint ("md") {
+            text-align: center;
+            display: block;
+        }
+
+        
+    }
+
+    .nav-opener {
+        display: none;
+
+        @include breakpoint ("md") {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        @include breakpoint ("xs") {
+            width: 40px;
+            height: 40px;                  
+        }
+
+        &::before {
+            content: "";
+            width: 40px;
+            height: 2px;
+            border-radius: 4px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2f281e;
+            transition: all ease-in-out 0.3s;
+        }
+
+        &::after {
+            content: "";
+            width: 40px;
+            height: 2px;
+            border-radius: 4px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2f281e;
+            transition: all ease-in-out 0.3s;
+        }
+
+        span {
+            width: 40px;
+            height: 2px;
+            border-radius: 4px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-50% -50%);
+            background-color: #2f281e;
+            transition: all ease-in-out 0.3s;
+        }
+
+    }
+}

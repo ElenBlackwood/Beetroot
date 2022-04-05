@@ -1,0 +1,8 @@
+.main {
+    padding: 128px 100px;
+
+    @include breakpoint ("xs") {
+        padding: 60px 30px;
+                   
+    }
+}

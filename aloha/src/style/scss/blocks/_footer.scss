@@ -1,0 +1,38 @@
+.footer {
+    padding: 100px 0;
+    font-size: 18px;
+    line-height: 29px;
+
+    @include breakpoint ("md") {
+        padding: 100px;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    @include breakpoint ("xs") {
+        font-size: 10px;
+        line-height: 20px; 
+        padding: 20px;
+    }
+
+    .start-footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .footer-img-holder {
+        max-width: 50px;
+    }
+
+    .footer-colum-blocks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    
+
+}

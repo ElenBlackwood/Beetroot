@@ -1,0 +1,26 @@
+.intro {
+    margin-bottom: 90px;
+
+    @include breakpoint ("md") {
+        font-size: 60px;
+        line-height: 80px;
+        text-align: center;
+    }
+
+    @include breakpoint ("xs") {
+        font-size: 30px;
+        line-height: 50px;                   
+    }
+
+    .intro-title {
+        margin-bottom: 136px; 
+    }
+
+    .intro-img {
+        margin-bottom: 84px;
+    }
+
+    .intro-text {
+        margin-bottom: 56px;
+    }
+}
