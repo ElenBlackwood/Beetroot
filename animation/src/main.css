@@ -1,0 +1,45 @@
+/*по ховеру ао коли запускається сайт (кей-фреймс) */
+
+.block {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: bg; /*найголовніше/*
+    animation-duration: 5s; /*найголовніше/*
+    animation-delay: 2s;
+    /* animation-iteration-count: infinite; */
+    animation-fill-mode: both;
+}
+
+@keyframes bg {
+    0% {
+        background-color: red;
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        background-color: gray;
+        left: 250px;
+        /* top: 0; */
+    }
+    
+    50% {
+        background-color: blue;
+        /* top: 700px; */
+        left: 500px;
+    }
+
+    75% {
+        background-color: pink;
+        /* top: 700px; */
+        left: 750px;
+    }
+
+    100% {
+        background-color: yellow;
+        left: 1000px;
+        /* top: 0; */
+    }
+}
